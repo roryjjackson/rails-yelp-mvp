@@ -1,0 +1,7 @@
+<%= @restaurant.name %>
+<%= @restaurant.address %>
+<%= @restaurant.category %>
+
+<p><%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %></p>
+<p><%= link_to "Edit this restaurant", edit_restaurant_path %></p>
+<%= link_to "Delete", restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
